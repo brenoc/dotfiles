@@ -6,4 +6,4 @@ tar -zxf node-v$ver.tar.gz
 cd node-v$ver
 ./configure && sudo make && sudo make install
 sudo setcap 'cap_net_bind_service=+ep' /usr/local/bin/node
-sudo npm i -g coffee-script less grunt-cli phantomjs karma bower bower-installer express
+sudo npm i -g coffee-script less grunt-cli phantomjs karma bower bower-installer express coffeelint
