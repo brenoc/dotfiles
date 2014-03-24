@@ -1,5 +1,4 @@
 #!/bin/bash
-cd ~/Downloads/
 ver="0.10.26"
 echo Installing node version $ver
 wget http://nodejs.org/dist/v$ver/node-v$ver.tar.gz
