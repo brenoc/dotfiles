@@ -9,7 +9,7 @@ Packages:
  - Better Javascript
  - SublimeLint-coffeelint
  - JSONLint
- - JSON Reindent
+ - Pretty JSON
 
 
 Download and install [Source Code Pro](https://github.com/adobe/source-code-pro)
