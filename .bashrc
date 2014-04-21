@@ -20,3 +20,7 @@ source ~/.git-prompt.sh
 
 ## PWD
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\W\[\033[00m\]$(__git_ps1)\$ '
+
+killthis() {
+	kill -9 `ps aux | grep $1 | awk '{print $2}'`
+}
