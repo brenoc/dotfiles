@@ -21,5 +21,5 @@ echo ">>>"
 echo ">>> Finished installing node latest stable." 
 echo ">>>"
 
-sudo setcap 'cap_net_bind_service=+ep' /usr/local/bin/node
-sudo npm i -g coffee-script less grunt-cli phantomjs karma bower bower-installer express coffeelint releasy
+sudo setcap 'cap_net_bind_service=+ep' ~/local/bin/node
+npm i -g coffee-script less grunt-cli phantomjs karma bower bower-installer express coffeelint releasy
