@@ -4,7 +4,6 @@ Packages:
  - Theme - Spacegray
  - Theme - Afterglow
  - CoffeeCompile
- - Dust.js
  - LESS
  - Better Coffeescript
  - Better Javascript
