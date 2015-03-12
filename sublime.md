@@ -2,6 +2,7 @@ Packages:
  - SideBarEnhancements
  - Git
  - Theme - Spacegray
+ - Theme - Afterglow
  - CoffeeCompile
  - Dust.js
  - LESS
@@ -21,6 +22,8 @@ Download and install [Source Code Pro](https://github.com/adobe/source-code-pro)
 	[
 		"Vintage"
 	],
-	"theme": "Spacegray Eighties.sublime-theme",
+	"theme": "Afterglow.sublime-theme",
+	"tabs_medium": true,
+	"sidebar_row_padding_medium": true,
 	"font_face": "Source Code Pro"
 }
