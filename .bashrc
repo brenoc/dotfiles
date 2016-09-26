@@ -4,7 +4,15 @@ alias gp='git pull'
 alias eh='sudo gedit /etc/hosts'
 alias cd..='cd ..'
 alias cdd='cd ~/Downloads'
-alias cdp='cd ~/projects'
+alias cdp='cd ~/Projects'
+alias ccat='pygmentize -g -O style=colorful,linenos=1'
+
+# Show/Hide Mac hidden files
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# Open files on Xcode
+alias xcode="open -a Xcode"
 
 function b {
  echo $1 | sudo tee /sys/class/backlight/acpi_video0/brightness
@@ -17,10 +25,13 @@ function parse_git_branch {
 }
 
 source ~/.git-prompt.sh
+source ~/.git-completion.bash
 
 ## PWD
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u:\[\033[01;34m\]\W\[\033[00m\]$(__git_ps1)\$ '
+export PS1='\[\033[01;32m\]\u:\[\033[01;34m\]\W\[\033[00m\]$(__git_ps1)\$ '
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
 
-killthis() {
-	kill -9 `ps aux | grep $1 | awk '{print $2}'`
-}
+NPM_PACKAGES="${HOME}/.npm-packages"
+
+PATH="$NPM_PACKAGES/bin:$PATH"
