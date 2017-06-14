@@ -17,9 +17,7 @@
 [color "branch"]
 	remote = yellow
 [alias]
-	graph = log --oneline --graph --decorate
 	g = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(yellow)%h%C(reset) %s%C(reset) %C(dim white)<%an>%C(reset) %C(bold blue)%ar%C(reset)%C(bold yellow)%d%C(reset)'
-	changelog = log --oneline --abbrev-commit --no-merges
 [push]
 	default = current
 [diff]
