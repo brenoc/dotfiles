@@ -21,18 +21,35 @@
 [push]
 	default = current
 [diff]
-	tool = meld
+	tool = code
 	keepBackup = false
 [difftool]
 	prompt = false
-[difftool "meld"]
-	trustExitCode = true
-	cmd = open -W -a Meld --args \"$LOCAL\" \"$REMOTE\"
+[difftool "code"]
+	cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
-	tool = meld
+	tool = vscode
 	keepBackup = false
 [mergetool]
 	prompt = false
-[mergetool "meld"]
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[mergetool "code"]
 	trustExitCode = true
 	cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
+[pull]
+	rebase = true
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 227
+	frag = magenta bold
+	commit = 227 bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
