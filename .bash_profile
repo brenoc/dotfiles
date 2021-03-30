@@ -1,7 +1,8 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 ### Aliases
 alias gs='git status'
 alias gp='git pull'
-alias eh='sudo gedit /etc/hosts'
 alias cd..='cd ..'
 alias cdd='cd ~/Downloads'
 alias cdp='cd ~/Projects'
@@ -10,9 +11,6 @@ alias ccat='pygmentize -g -O style=colorful,linenos=1'
 # Show/Hide Mac hidden files
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-# Open files on Xcode
-alias xcode="open -a Xcode"
 
 function b {
  echo $1 | sudo tee /sys/class/backlight/acpi_video0/brightness
