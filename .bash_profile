@@ -30,6 +30,10 @@ export PS1='\[\033[01;32m\]\u:\[\033[01;34m\]\W\[\033[00m\]$(__git_ps1)\$ '
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-NPM_PACKAGES="${HOME}/.npm-packages"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 
+NPM_PACKAGES="${HOME}/.npm-packages"
 PATH="$NPM_PACKAGES/bin:$PATH"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
